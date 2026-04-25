@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "nome": "Enrolado de Frango com Catupiry",
+    "descricao": "Massa leve recheada com frango desfiado e catupiry cremoso, assado na hora para garantir a crocância perfeita.",
+    "preco": "12.00",
+    "categoria": "Tradicionais",
+    "imagem": "images/frango-catupiry.jpg",
+    "destaque": true
+  },
+  {
+    "id": 2,
+    "nome": "Enrolado de Carne com Cheddar",
+    "descricao": "Carne moída temperada com mix de especiarias e cheddar derretido. Sabor que vai te conquistar.",
+    "preco": "13.00",
+    "categoria": "Tradicionais",
+    "imagem": "images/carne-cheddar.jpg",
+    "destaque": false
+  },
+  {
+    "id": 3,
+    "nome": "Enrolado de Espinafre com Queijo",
+    "descricao": "Para quem busca leveza sem abrir mão do sabor. Espinafre fresco com queijo minas especial.",
+    "preco": "11.00",
+    "categoria": "Vegetarianos",
+    "imagem": "images/espinafre-queijo.jpg",
+    "destaque": false
+  },
+  {
+    "id": 4,
+    "nome": "Enrolado de Camarão com Queijo",
+    "descricao": "Camarão temperado com alho e ervas finas, combinado com queijo gratinado. Sofisticação em cada mordida.",
+    "preco": "18.00",
+    "categoria": "Premium",
+    "imagem": "images/camarao-queijo.jpg",
+    "destaque": true
+  },
+  {
+    "id": 5,
+    "nome": "Enrolado de Chocolate",
+    "descricao": "Massa doce e fofinha recheada com chocolate belga derretido. A sobremesa perfeita.",
+    "preco": "10.00",
+    "categoria": "Doces",
+    "imagem": "images/chocolate.jpg",
+    "destaque": false
+  },
+  {
+    "id": 6,
+    "nome": "Enrolado de Nutella",
+    "descricao": "Massa artesanal recheada com Nutella e avelãs trituradas. Irresistível e indulgente.",
+    "preco": "12.00",
+    "categoria": "Doces",
+    "imagem": "images/nutella.jpg",
+    "destaque": true
+  }
+]

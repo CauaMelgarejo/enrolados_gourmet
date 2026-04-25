@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Enrolados Gourmet – Salgados artesanais com recheios gourmet. Peça pelo WhatsApp e receba fresquinho!" />
+  <meta name="keywords" content="enrolados, salgados gourmet, salgados artesanais, delivery, comida gourmet" />
+  <meta property="og:title" content="Enrolados Gourmet – Salgados Artesanais" />
+  <meta property="og:description" content="Feitos com amor e ingredientes selecionados. Peça agora pelo WhatsApp!" />
+  <meta property="og:type" content="website" />
+  <title>Enrolados Gourmet – Salgados Artesanais</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- =========================================================
+       HEADER
+  ========================================================= -->
+  <header class="header" id="header" role="banner">
+    <div class="header__container">
+      <a href="#inicio" class="header__logo" aria-label="Enrolados Gourmet – Página inicial">
+        <span class="header__logo-icon">🥐</span>
+        <span class="header__logo-text">Enrolados <span class="header__logo-highlight">Gourmet</span></span>
+      </a>
+
+      <button class="header__menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+        <span class="header__hamburger"></span>
+        <span class="header__hamburger"></span>
+        <span class="header__hamburger"></span>
+      </button>
+
+      <nav class="header__nav" id="navMenu" role="navigation" aria-label="Menu principal">
+        <ul class="header__nav-list">
+          <li><a href="#inicio" class="header__nav-link">Início</a></li>
+          <li><a href="#diferenciais" class="header__nav-link">Diferenciais</a></li>
+          <li><a href="#cardapio" class="header__nav-link">Cardápio</a></li>
+          <li><a href="#contato" class="header__nav-link">Contato</a></li>
+        </ul>
+        <a href="#cardapio" class="btn btn--whatsapp btn--sm header__cta" id="headerWhatsappBtn">
+          <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          Peça pelo WhatsApp
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- =========================================================
+         HERO SECTION
+    ========================================================= -->
+    <section class="hero" id="inicio" aria-label="Seção principal">
+      <div class="hero__bg-overlay"></div>
+      <img src="images/hero-banner.jpg" alt="Enrolados Gourmet em destaque" class="hero__bg-image" />
+      <div class="hero__content">
+        <span class="hero__badge animate-fade-in-down">✨ Artesanal &amp; Gourmet</span>
+        <h1 class="hero__title animate-fade-in-up">
+          Salgados que fazem<br />
+          <em class="hero__title-highlight">a diferença</em>
+        </h1>
+        <p class="hero__subtitle animate-fade-in-up animate-delay-1">
+          Feitos com ingredientes selecionados e muito amor. Cada enrolado é uma explosão de sabor, crocante por fora e irresistível por dentro.
+        </p>
+        <div class="hero__actions animate-fade-in-up animate-delay-2">
+          <a href="#cardapio" class="btn btn--primary btn--lg" id="heroCardapioBtn">
+            Ver Cardápio
+          </a>
+          <a href="https://wa.me/5511999999999?text=Olá%2C+gostaria+de+fazer+um+pedido!" class="btn btn--whatsapp btn--lg" id="heroPedidoBtn" target="_blank" rel="noopener noreferrer">
+            <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            Fazer Pedido
+          </a>
+        </div>
+      </div>
+      <div class="hero__scroll-indicator" aria-hidden="true">
+        <span class="hero__scroll-dot"></span>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         DIFERENCIAIS
+    ========================================================= -->
+    <section class="diferenciais" id="diferenciais" aria-labelledby="diferenciaisTitle">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Por que nos escolher?</span>
+          <h2 class="section-title" id="diferenciaisTitle">Nossos Diferenciais</h2>
+          <p class="section-subtitle">Qualidade e sabor que você sente em cada mordida</p>
+        </div>
+
+        <div class="diferenciais__grid">
+          <article class="diferencial-card reveal-on-scroll" aria-label="Ingredientes premium">
+            <div class="diferencial-card__icon-wrap">
+              <span class="diferencial-card__icon" role="img" aria-hidden="true">🌿</span>
+            </div>
+            <h3 class="diferencial-card__title">Ingredientes Premium</h3>
+            <p class="diferencial-card__text">Selecionamos os melhores ingredientes do mercado para garantir sabor e qualidade em cada unidade.</p>
+          </article>
+
+          <article class="diferencial-card reveal-on-scroll" aria-label="Feito artesanalmente">
+            <div class="diferencial-card__icon-wrap">
+              <span class="diferencial-card__icon" role="img" aria-hidden="true">👨‍🍳</span>
+            </div>
+            <h3 class="diferencial-card__title">Feito Artesanalmente</h3>
+            <p class="diferencial-card__text">Cada enrolado é preparado com cuidado e dedicação pelas mãos dos nossos chefs, sem industrialização.</p>
+          </article>
+
+          <article class="diferencial-card reveal-on-scroll" aria-label="Entrega rápida">
+            <div class="diferencial-card__icon-wrap">
+              <span class="diferencial-card__icon" role="img" aria-hidden="true">⚡</span>
+            </div>
+            <h3 class="diferencial-card__title">Entrega Rápida</h3>
+            <p class="diferencial-card__text">Receba seus pedidos fresquinhos e quentinhos com agilidade e pontualidade garantidas.</p>
+          </article>
+
+          <article class="diferencial-card reveal-on-scroll" aria-label="Sempre frescos">
+            <div class="diferencial-card__icon-wrap">
+              <span class="diferencial-card__icon" role="img" aria-hidden="true">🔥</span>
+            </div>
+            <h3 class="diferencial-card__title">Sempre Frescos</h3>
+            <p class="diferencial-card__text">Produção diária sob encomenda para que você sempre receba um produto no auge do sabor.</p>
+          </article>
+
+          <article class="diferencial-card reveal-on-scroll" aria-label="Atendimento personalizado">
+            <div class="diferencial-card__icon-wrap">
+              <span class="diferencial-card__icon" role="img" aria-hidden="true">💬</span>
+            </div>
+            <h3 class="diferencial-card__title">Atendimento Exclusivo</h3>
+            <p class="diferencial-card__text">Atendimento humanizado e personalizado via WhatsApp para facilitar seu pedido.</p>
+          </article>
+
+          <article class="diferencial-card reveal-on-scroll" aria-label="Variedade de sabores">
+            <div class="diferencial-card__icon-wrap">
+              <span class="diferencial-card__icon" role="img" aria-hidden="true">🌟</span>
+            </div>
+            <h3 class="diferencial-card__title">Variedade de Sabores</h3>
+            <p class="diferencial-card__text">Do tradicional ao premium, temos opções para todos os gostos, inclusive vegetarianos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CARDÁPIO DIGITAL
+    ========================================================= -->
+    <section class="cardapio" id="cardapio" aria-labelledby="cardapioTitle">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">O que temos para você</span>
+          <h2 class="section-title" id="cardapioTitle">Nosso Cardápio</h2>
+          <p class="section-subtitle">Escolha seu favorito e faça seu pedido diretamente pelo WhatsApp</p>
+        </div>
+
+        <!-- Filtro por categoria -->
+        <div class="cardapio__filtros" id="cardapioFiltros" role="group" aria-label="Filtrar por categoria">
+          <button class="filtro-btn filtro-btn--active" data-categoria="Todos" id="filtroTodos">Todos</button>
+        </div>
+
+        <!-- Estado de carregamento -->
+        <div class="cardapio__loader" id="cardapioLoader" aria-live="polite" aria-label="Carregando cardápio">
+          <div class="loader-spinner" aria-hidden="true"></div>
+          <p>Carregando cardápio...</p>
+        </div>
+
+        <!-- Mensagem de erro -->
+        <div class="cardapio__empty" id="cardapioEmpty" hidden>
+          <span class="cardapio__empty-icon" aria-hidden="true">🥐</span>
+          <p>Nenhum item encontrado nessa categoria.</p>
+        </div>
+
+        <!-- Grid de cards -->
+        <div class="cardapio__grid" id="cardapioGrid" aria-label="Lista de produtos" role="list"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CTA FINAL
+    ========================================================= -->
+    <section class="cta-section" id="contato" aria-labelledby="ctaTitle">
+      <div class="container">
+        <div class="cta-section__inner reveal-on-scroll">
+          <span class="cta-section__emoji" aria-hidden="true">🤤</span>
+          <h2 class="cta-section__title" id="ctaTitle">Pronto para pedir?</h2>
+          <p class="cta-section__text">
+            Fale com a gente pelo WhatsApp e monte seu pedido agora mesmo. Atendemos de segunda a sábado das 8h às 20h.
+          </p>
+          <a href="https://wa.me/5511999999999?text=Olá%2C+quero+fazer+um+pedido+nos+Enrolados+Gourmet!" class="btn btn--whatsapp btn--xl" id="ctaWhatsappBtn" target="_blank" rel="noopener noreferrer">
+            <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            Falar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__logo">🥐 Enrolados Gourmet</span>
+          <p class="footer__tagline">Sabor artesanal, entrega com amor.</p>
+        </div>
+        <nav class="footer__links" aria-label="Links do rodapé">
+          <a href="#inicio" class="footer__link">Início</a>
+          <a href="#diferenciais" class="footer__link">Diferenciais</a>
+          <a href="#cardapio" class="footer__link">Cardápio</a>
+          <a href="https://wa.me/5511999999999" class="footer__link" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </nav>
+      </div>
+      <p class="footer__copy">&copy; 2026 Enrolados Gourmet. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/5511999999999?text=Olá%2C+gostaria+de+fazer+um+pedido!" class="whatsapp-float" id="whatsappFloat" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
