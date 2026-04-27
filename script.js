@@ -16,7 +16,7 @@ const CONFIG = {
   cardapioUrl: 'cardapio.json',
 
   /** Número do WhatsApp (somente dígitos, com DDI) */
-  whatsappNumber: '5511999999999',
+  whatsappNumber: '5551984298431',
 
   /** Atraso de stagger entre cards (ms) */
   cardStagger: 80,
@@ -35,13 +35,13 @@ const state = {
 // REFERÊNCIAS DOM
 // =========================================================
 const dom = {
-  header:       document.getElementById('header'),
-  menuToggle:   document.getElementById('menuToggle'),
-  navMenu:      document.getElementById('navMenu'),
-  filtros:      document.getElementById('cardapioFiltros'),
-  grid:         document.getElementById('cardapioGrid'),
-  loader:       document.getElementById('cardapioLoader'),
-  empty:        document.getElementById('cardapioEmpty'),
+  header: document.getElementById('header'),
+  menuToggle: document.getElementById('menuToggle'),
+  navMenu: document.getElementById('navMenu'),
+  filtros: document.getElementById('cardapioFiltros'),
+  grid: document.getElementById('cardapioGrid'),
+  loader: document.getElementById('cardapioLoader'),
+  empty: document.getElementById('cardapioEmpty'),
 };
 
 // =========================================================
@@ -211,11 +211,11 @@ async function iniciarCardapio() {
     const categorias = extrairCategorias(state.cardapio);
     renderizarFiltros(categorias);
     renderizarGrid();
+    mostrarLoader(false);
   } catch (err) {
     console.error('Erro ao carregar cardápio:', err);
-    mostrarErroCarga();
-  } finally {
     mostrarLoader(false);
+    mostrarErroCarga();
   }
 }
 

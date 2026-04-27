@@ -1,16 +1,25 @@
 /* =========================================================
-   DESIGN TOKENS
+   DESIGN TOKENS — Enrolados Gourmet (Rose & Cream)
 ========================================================= */
 :root {
-  --color-primary:     #c8870a;
-  --color-primary-lt:  #e9a82e;
-  --color-primary-dk:  #9a6508;
-  --color-surface:     #0f0e0c;
-  --color-surface-2:   #1a1814;
-  --color-surface-3:   #252219;
-  --color-border:      rgba(200,135,10,.18);
-  --color-text:        #f5f0e8;
-  --color-text-muted:  #a09880;
+  /* Rosa principal extraído da logo */
+  --color-primary:     #c85a8a;
+  --color-primary-lt:  #e8a0be;
+  --color-primary-dk:  #a0406c;
+
+  /* Superfícies claras — creme e branco rosado */
+  --color-surface:     #fdf6f9;
+  --color-surface-2:   #fff0f5;
+  --color-surface-3:   #ffe4ee;
+
+  /* Borda sutil rosada */
+  --color-border:      rgba(200,90,138,.15);
+
+  /* Texto escuro sobre fundo claro */
+  --color-text:        #2d1a24;
+  --color-text-muted:  #8a6070;
+
+  /* WhatsApp */
   --color-whatsapp:    #25d366;
   --color-whatsapp-dk: #1da851;
 
@@ -22,8 +31,8 @@
   --radius-lg:  22px;
   --radius-xl:  32px;
 
-  --shadow-card:  0 8px 32px rgba(0,0,0,.45);
-  --shadow-glow:  0 0 24px rgba(200,135,10,.25);
+  --shadow-card:  0 8px 32px rgba(200,90,138,.12);
+  --shadow-glow:  0 0 24px rgba(200,90,138,.2);
 
   --transition: .25s cubic-bezier(.4,0,.2,1);
   --transition-slow: .5s cubic-bezier(.4,0,.2,1);
@@ -124,12 +133,12 @@ ul { list-style: none; }
 .btn--primary {
   background: linear-gradient(135deg, var(--color-primary), var(--color-primary-lt));
   color: #fff;
-  box-shadow: 0 4px 20px rgba(200,135,10,.4);
+  box-shadow: 0 4px 20px rgba(200,90,138,.35);
 }
 .btn--primary:hover {
-  background: linear-gradient(135deg, var(--color-primary-lt), var(--color-primary));
+  background: linear-gradient(135deg, var(--color-primary-dk), var(--color-primary));
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(200,135,10,.5);
+  box-shadow: 0 8px 28px rgba(200,90,138,.5);
 }
 
 .btn--whatsapp {
@@ -162,14 +171,14 @@ ul { list-style: none; }
   top: 0; left: 0; right: 0;
   z-index: 1000;
   height: var(--header-h);
-  background: rgba(15,14,12,.88);
+  background: rgba(253,246,249,.94);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--color-border);
   transition: box-shadow var(--transition);
 }
 
 .header--scrolled {
-  box-shadow: 0 4px 24px rgba(0,0,0,.5);
+  box-shadow: 0 4px 24px rgba(200,90,138,.12);
 }
 
 .header__container {
@@ -191,7 +200,14 @@ ul { list-style: none; }
   font-weight: 700;
 }
 
-.header__logo-icon { font-size: 1.5rem; }
+.header__logo-img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 50%;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 6px rgba(200,90,138,.25));
+}
 
 .header__logo-highlight { color: var(--color-primary); }
 
@@ -279,9 +295,9 @@ ul { list-style: none; }
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(15,14,12,.15) 0%,
-    rgba(15,14,12,.55) 60%,
-    rgba(15,14,12,.95) 100%
+    rgba(45,26,36,.2) 0%,
+    rgba(45,26,36,.55) 60%,
+    rgba(45,26,36,.92) 100%
   );
   z-index: 1;
 }
@@ -296,13 +312,13 @@ ul { list-style: none; }
 .hero__badge {
   display: inline-block;
   padding: 6px 18px;
-  border: 1px solid rgba(200,135,10,.5);
+  border: 1px solid rgba(232,160,190,.6);
   border-radius: 50px;
   font-size: .8rem;
   font-weight: 600;
   letter-spacing: .1em;
   color: var(--color-primary-lt);
-  background: rgba(200,135,10,.12);
+  background: rgba(200,90,138,.15);
   margin-bottom: 20px;
 }
 
@@ -382,14 +398,14 @@ ul { list-style: none; }
 .diferencial-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-glow);
-  border-color: rgba(200,135,10,.4);
+  border-color: rgba(200,90,138,.35);
 }
 
 .diferencial-card__icon-wrap {
   width: 68px; height: 68px;
   border-radius: 50%;
-  background: rgba(200,135,10,.12);
-  border: 1px solid rgba(200,135,10,.25);
+  background: rgba(200,90,138,.1);
+  border: 1px solid rgba(200,90,138,.22);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -399,7 +415,7 @@ ul { list-style: none; }
 }
 
 .diferencial-card:hover .diferencial-card__icon-wrap {
-  background: rgba(200,135,10,.22);
+  background: rgba(200,90,138,.2);
 }
 
 .diferencial-card__icon { font-size: 1.75rem; }
@@ -457,7 +473,7 @@ ul { list-style: none; }
   background: var(--color-primary);
   border-color: var(--color-primary);
   color: #fff;
-  box-shadow: 0 4px 16px rgba(200,135,10,.35);
+  box-shadow: 0 4px 16px rgba(200,90,138,.3);
 }
 
 /* Loader */
@@ -471,10 +487,13 @@ ul { list-style: none; }
   font-size: .95rem;
 }
 
+/* Garante que [hidden] sempre vence o display:flex */
+.cardapio__loader[hidden] { display: none; }
+
 .loader-spinner {
   width: 44px; height: 44px;
   border-radius: 50%;
-  border: 3px solid rgba(200,135,10,.2);
+  border: 3px solid rgba(200,90,138,.2);
   border-top-color: var(--color-primary);
   animation: spin .8s linear infinite;
 }
@@ -514,7 +533,7 @@ ul { list-style: none; }
 .produto-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-card), var(--shadow-glow);
-  border-color: rgba(200,135,10,.4);
+  border-color: rgba(200,90,138,.35);
 }
 
 .produto-card--destaque::before {
@@ -548,13 +567,13 @@ ul { list-style: none; }
 .produto-card__categoria {
   position: absolute;
   bottom: 10px; right: 10px;
-  background: rgba(15,14,12,.75);
+  background: rgba(253,246,249,.88);
   backdrop-filter: blur(6px);
   border: 1px solid var(--color-border);
   border-radius: 50px;
   font-size: .7rem;
   font-weight: 600;
-  color: var(--color-primary-lt);
+  color: var(--color-primary);
   padding: 4px 12px;
   letter-spacing: .06em;
 }
@@ -611,8 +630,8 @@ ul { list-style: none; }
 }
 
 .cta-section__inner {
-  background: linear-gradient(135deg, rgba(200,135,10,.12), rgba(200,135,10,.05));
-  border: 1px solid rgba(200,135,10,.3);
+  background: linear-gradient(135deg, rgba(200,90,138,.1), rgba(232,160,190,.07));
+  border: 1px solid rgba(200,90,138,.25);
   border-radius: var(--radius-xl);
   padding: 64px 40px;
   text-align: center;
@@ -779,7 +798,7 @@ ul { list-style: none; }
     flex-direction: column;
     justify-content: center;
     gap: 32px;
-    background: rgba(15,14,12,.97);
+    background: rgba(253,246,249,.98);
     backdrop-filter: blur(16px);
     transform: translateX(100%);
     transition: transform var(--transition-slow);
