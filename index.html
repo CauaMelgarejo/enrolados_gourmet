@@ -17,17 +17,15 @@
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
 </head>
 
 <body>
 
-  <!-- =========================================================
-       HEADER
-  ========================================================= -->
   <header class="header" id="header" role="banner">
     <div class="header__container">
       <a href="#inicio" class="header__logo" aria-label="Enrolados Gourmet – Página inicial">
-        <img src="images/image.png" alt="Enrolados Gourmet" class="header__logo-img" />
+        <img src="images/logo.png" alt="Enrolados Gourmet" class="header__logo-img" />
         <span class="header__logo-text">Enrolados <span class="header__logo-highlight">Gourmet</span></span>
       </a>
 
@@ -58,17 +56,13 @@
   </header>
 
   <main>
-
-    <!-- =========================================================
-         HERO SECTION
-    ========================================================= -->
     <section class="hero" id="inicio" aria-label="Seção principal">
       <div class="hero__bg-overlay"></div>
-      <img src="images/hero-banner.jpg" alt="Enrolados Gourmet em destaque" class="hero__bg-image" />
+      <img src="images/hero-banner.png" alt="Enrolados Gourmet em destaque" class="hero__bg-image" />
       <div class="hero__content">
-        <span class="hero__badge animate-fade-in-down">✨ Artesanal &amp; Gourmet</span>
+        <span class="hero__badge animate-fade-in-down">Artesanal &amp; Gourmet</span>
         <h1 class="hero__title animate-fade-in-up">
-          Salgados que fazem<br />
+          Doces que fazem<br />
           <em class="hero__title-highlight">a diferença</em>
         </h1>
         <p class="hero__subtitle animate-fade-in-up animate-delay-1">
@@ -79,7 +73,7 @@
           <a href="#cardapio" class="btn btn--primary btn--lg" id="heroCardapioBtn">
             Ver Cardápio
           </a>
-          <a href="https://wa.me/5511999999999?text=Olá%2C+gostaria+de+fazer+um+pedido!"
+          <a href="https://wa.me/5551984298431?text=Olá%2C+gostaria+de+fazer+um+pedido!"
             class="btn btn--whatsapp btn--lg" id="heroPedidoBtn" target="_blank" rel="noopener noreferrer">
             <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
               aria-hidden="true">
@@ -95,9 +89,6 @@
       </div>
     </section>
 
-    <!-- =========================================================
-         DIFERENCIAIS
-    ========================================================= -->
     <section class="diferenciais" id="diferenciais" aria-labelledby="diferenciaisTitle">
       <div class="container">
         <div class="section-header">
@@ -157,16 +148,12 @@
               <span class="diferencial-card__icon" role="img" aria-hidden="true">🌟</span>
             </div>
             <h3 class="diferencial-card__title">Variedade de Sabores</h3>
-            <p class="diferencial-card__text">Do tradicional ao premium, temos opções para todos os gostos, inclusive
-              vegetarianos.</p>
+            <p class="diferencial-card__text">Temos opções para todos os gostos.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================
-         CARDÁPIO DIGITAL
-    ========================================================= -->
     <section class="cardapio" id="cardapio" aria-labelledby="cardapioTitle">
       <div class="container">
         <div class="section-header">
@@ -175,31 +162,24 @@
           <p class="section-subtitle">Escolha seu favorito e faça seu pedido diretamente pelo WhatsApp</p>
         </div>
 
-        <!-- Filtro por categoria -->
         <div class="cardapio__filtros" id="cardapioFiltros" role="group" aria-label="Filtrar por categoria">
           <button class="filtro-btn filtro-btn--active" data-categoria="Todos" id="filtroTodos">Todos</button>
         </div>
 
-        <!-- Estado de carregamento -->
-        <div class="cardapio__loader" id="cardapioLoader" aria-live="polite" aria-label="Carregando cardápio" hidden>
+        <div class="cardapio__loader" id="cardapioLoader" aria-live="polite" aria-label="Carregando cardápio">
           <div class="loader-spinner" aria-hidden="true"></div>
           <p>Carregando cardápio...</p>
         </div>
 
-        <!-- Mensagem de erro -->
         <div class="cardapio__empty" id="cardapioEmpty" hidden>
           <span class="cardapio__empty-icon" aria-hidden="true">🥐</span>
           <p>Nenhum item encontrado nessa categoria.</p>
         </div>
 
-        <!-- Grid de cards -->
         <div class="cardapio__grid" id="cardapioGrid" aria-label="Lista de produtos" role="list"></div>
       </div>
     </section>
 
-    <!-- =========================================================
-         CTA FINAL
-    ========================================================= -->
     <section class="cta-section" id="contato" aria-labelledby="ctaTitle">
       <div class="container">
         <div class="cta-section__inner reveal-on-scroll">
@@ -208,7 +188,7 @@
           <p class="cta-section__text">
             Fale com a gente pelo WhatsApp e monte seu pedido agora mesmo. Atendemos de segunda a sábado das 8h às 20h.
           </p>
-          <a href="https://wa.me/5511999999999?text=Olá%2C+quero+fazer+um+pedido+nos+Enrolados+Gourmet!"
+          <a href="https://wa.me/5551984298431?text=Olá%2C+quero+fazer+um+pedido+nos+Enrolados+Gourmet!"
             class="btn btn--whatsapp btn--xl" id="ctaWhatsappBtn" target="_blank" rel="noopener noreferrer">
             <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
               aria-hidden="true">
@@ -222,22 +202,18 @@
     </section>
 
   </main>
-
-  <!-- =========================================================
-       FOOTER
-  ========================================================= -->
   <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer__inner">
         <div class="footer__brand">
-          <span class="footer__logo">🥐 Enrolados Gourmet</span>
-          <p class="footer__tagline">Sabor artesanal, entrega com amor.</p>
+          <img src="images/logo.png" alt="Enrolados Gourmet" class="footer__logo">
+          <p class="footer__tagline">Sabores que encantam, feitos com amor.</p>
         </div>
         <nav class="footer__links" aria-label="Links do rodapé">
           <a href="#inicio" class="footer__link">Início</a>
           <a href="#diferenciais" class="footer__link">Diferenciais</a>
           <a href="#cardapio" class="footer__link">Cardápio</a>
-          <a href="https://wa.me/5511999999999" class="footer__link" target="_blank"
+          <a href="https://wa.me/5551984298431" class="footer__link" target="_blank"
             rel="noopener noreferrer">WhatsApp</a>
         </nav>
       </div>
@@ -245,12 +221,10 @@
     </div>
   </footer>
 
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/5511999999999?text=Olá%2C+gostaria+de+fazer+um+pedido!" class="whatsapp-float"
+  <a href="https://wa.me/5551984298431?text=Olá%2C+gostaria+de+fazer+um+pedido!" class="whatsapp-float"
     id="whatsappFloat" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path
-        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+      <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
     </svg>
   </a>
 
