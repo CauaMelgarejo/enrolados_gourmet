@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://enroladosgourmet.com.br/</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://enroladosgourmet.com.br/images/hero-banner.png</image:loc>
+      <image:title>Enrolados Gourmet – Doces artesanais</image:title>
+      <image:caption>Doces que fazem a diferença - Enrolados Gourmet</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://enroladosgourmet.com.br/images/bolo.jpeg</image:loc>
+      <image:title>Bolo personalizado</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://enroladosgourmet.com.br/images/bento-cake.png</image:loc>
+      <image:title>Bento Cake</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://enroladosgourmet.com.br/images/dunuts.png</image:loc>
+      <image:title>Cento de mini Dunuts</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://enroladosgourmet.com.br/images/docinhos.png</image:loc>
+      <image:title>Cento de Docinhos de festa</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://enroladosgourmet.com.br/images/logo.png</image:loc>
+      <image:title>Enrolados Gourmet Logo</image:title>
+    </image:image>
+  </url>
+</urlset>
