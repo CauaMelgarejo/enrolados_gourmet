@@ -2,10 +2,37 @@
   {
     "id": 1,
     "nome": "Bolo personalizado",
-    "descricao": "Massa leve recheada com frango desfiado e catupiry cremoso, assado na hora para garantir a crocância perfeita.",
-    "preco": "12.00",
+    "descricao": "Bolo Personalizado artesanal com decoração personalizada e sabor à escolha do cliente. Serve de 10 a 15 fatias, ideal para aniversários e momentos especiais.",
+    "preco": "95.00",
     "categoria": "Bolos",
     "imagem": "images/bolo.jpeg",
+    "destaque": true
+  },
+  {
+    "id": 2,
+    "nome": "Bento Cake",
+    "descricao": "Bento Cake artesanal com decoração personalizada, frases divertidas e sabor à escolha. Perfeito para presentear ou tornar momentos especiais ainda mais únicos.",
+    "preco": "40.00",
+    "categoria": "Bolos",
+    "imagem": "images/bento-cake.png",
+    "destaque": false
+  },
+  {
+    "id": 3,
+    "nome": "Cento de mini Dunuts",
+    "descricao": "Mini Donuts artesanais macios e saborosos, perfeitos para festas, eventos e lembranças especiais. Disponíveis em diversas coberturas e cores para deixar sua comemoração ainda mais doce.",
+    "preco": "130.00",
+    "categoria": "Dunuts",
+    "imagem": "images/dunuts.png",
+    "destaque": true
+  },
+  {
+    "id": 4,
+    "nome": "Cento de Docinhos de festa",
+    "descricao": "Cento de Docinhos de festa artesanais,feitos com ingredientes selecionados.Sabores variados para agradar todos os gostos.",
+    "preco": "125.00",
+    "categoria": "Docinhos",
+    "imagem": "images/docinhos.png",
     "destaque": true
   }
 ]
