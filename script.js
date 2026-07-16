@@ -107,7 +107,7 @@ function renderizarFiltros(categorias) {
     const btn = document.createElement('button');
     btn.className = `filtro-btn${cat === state.categoriaAtiva ? ' filtro-btn--active' : ''}`;
     btn.dataset.categoria = cat;
-    btn.textContent = cat;
+    btn.textContent = cat === 'Todos' ? 'Destaques' : cat;
     btn.id = `filtro${cat.replace(/\s+/g, '')}`;
     btn.setAttribute('aria-pressed', cat === state.categoriaAtiva ? 'true' : 'false');
     btn.addEventListener('click', () => aoSelecionarCategoria(cat));
@@ -175,7 +175,7 @@ function criarCardProduto(item, index) {
  */
 function renderizarGrid() {
   const filtrados = state.categoriaAtiva === 'Todos'
-    ? state.cardapio
+    ? state.cardapio.filter((i) => i.destaque)
     : state.cardapio.filter((i) => i.categoria === state.categoriaAtiva);
 
   dom.grid.innerHTML = '';
