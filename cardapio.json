@@ -79,5 +79,14 @@
     "categoria": "Doces",
     "imagem": "images/copo-da-felicidade.png",
     "destaque": false
+  },
+  {
+    "id": 11,
+    "nome": "Morango cravejado",
+    "descricao": "Sobremesa viral que combina morango fresco, brigadeiro branco, chocolate branco e pequenos cristais crocantes de caramelo vermelho. Uma experiência irresistível de sabor e textura.",
+    "preco": "12.50",
+    "categoria": "Doces",
+    "imagem": "images/morango-cravejado.png",
+    "destaque": true
   }
 ]
