@@ -824,6 +824,12 @@ ul {
   padding: 32px;
 }
 
+.natal-business__cta {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 24px;
+}
+
 .natal-business__list {
   display: grid;
   gap: 16px;
