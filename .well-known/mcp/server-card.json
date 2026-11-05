@@ -1,0 +1,14 @@
+{
+  "name": "Enrolados Gourmet MCP",
+  "version": "1.0.0",
+  "description": "Business discovery and ordering support for Enrolados Gourmet, including WhatsApp contact and seasonal product information.",
+  "endpoint": "https://enroladosgourmet.com.br/",
+  "capabilities": [
+    "business-info",
+    "product-discovery",
+    "whatsapp-ordering",
+    "contact-routing"
+  ],
+  "transport": "https",
+  "schemaVersion": "SEP-1649"
+}

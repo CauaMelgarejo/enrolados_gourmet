@@ -516,35 +516,33 @@ ul {
 .natal-menu-hero__content {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 
 .natal-menu-hero__content h3 {
   font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 2.8rem);
   line-height: 1.1;
-  margin: 0;
   color: var(--color-text);
 }
 
 .natal-menu-hero__content p {
   color: var(--color-text-muted);
   line-height: 1.7;
-  margin: 0;
 }
 
 .natal-menu-hero__detail-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
+  margin-top: 6px;
 }
 
 .natal-menu-spec {
-  border: 1px solid rgba(108, 67, 78, .1);
+  border: 1px solid var(--color-border);
   border-radius: 18px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, .8), rgba(255, 246, 240, .94));
+  background: rgba(255, 255, 255, .72);
   padding: 14px 16px;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .35);
 }
 
 .natal-menu-spec h4,
@@ -562,17 +560,19 @@ ul {
   list-style: none;
 }
 
-.natal-menu-spec li {
+.natal-menu-spec li,
+.natal-menu-hero__flavors li {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 7px 0;
+  padding: 6px 0;
   border-bottom: 1px solid rgba(108, 67, 78, .08);
   color: var(--color-text-muted);
 }
 
-.natal-menu-spec li:last-child {
+.natal-menu-spec li:last-child,
+.natal-menu-hero__flavors li:last-child {
   border-bottom: none;
 }
 
@@ -586,25 +586,20 @@ ul {
 }
 
 .natal-menu-hero__flavors {
-  border: 1px solid rgba(108, 67, 78, .1);
+  border: 1px solid var(--color-border);
   border-radius: 18px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, .8), rgba(255, 248, 242, .92));
+  background: rgba(255, 255, 255, .72);
   padding: 14px 16px;
-}
-
-.natal-menu-hero__flavors ul {
-  columns: 2;
-  column-gap: 20px;
-  padding-left: 1.15rem;
+  margin-top: 8px;
 }
 
 .natal-menu-hero__flavors li {
   display: list-item;
   list-style: disc;
-  margin: 0 0 6px;
+  margin-left: 1.2rem;
   padding-right: 0;
-  color: var(--color-text-muted);
-  break-inside: avoid;
+  border-bottom: none;
+  justify-content: flex-start;
 }
 
 .natal-menu-hero__flavor--note,
@@ -625,7 +620,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 .natal-menu-hero__image-wrap {
@@ -634,7 +629,6 @@ ul {
   border-radius: 22px;
   border: 1px solid var(--color-border);
   background: linear-gradient(135deg, rgba(200, 90, 138, .06), rgba(245, 212, 119, .08));
-  box-shadow: 0 18px 34px rgba(120, 59, 73, .08);
 }
 
 .natal-menu-hero__image-wrap img {
@@ -718,15 +712,6 @@ ul {
   .natal-menu-hero {
     grid-template-columns: 1fr;
     padding: 18px;
-  }
-
-  .natal-menu-hero__detail-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .natal-menu-hero__flavors ul {
-    columns: 1;
-    padding-left: 1.1rem;
   }
 }
 
@@ -822,12 +807,6 @@ ul {
   border: 1px solid var(--color-border);
   border-radius: 28px;
   padding: 32px;
-}
-
-.natal-business__cta {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 24px;
 }
 
 .natal-business__list {
@@ -1666,33 +1645,33 @@ ul {
     --header-h: 60px;
   }
 
-  .btn {
-    white-space: normal;
-  }
-
-  .header__container {
-    padding-inline: 16px;
-  }
-
   .header__menu-toggle {
     display: flex;
+    width: 46px;
+    height: 46px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(200, 90, 138, .18), rgba(245, 212, 119, .22));
+    border: 1px solid rgba(200, 90, 138, .28);
+    box-shadow: 0 10px 22px rgba(120, 59, 73, .08);
   }
 
   .header__nav {
     position: fixed;
-    inset: var(--header-h) 0 0 0;
-    width: 100%;
+    inset: 0;
     flex-direction: column;
     justify-content: center;
     gap: 32px;
-    background: linear-gradient(180deg, rgba(253, 246, 249, .98), rgba(245, 228, 234, .98));
-    border-top: 1px solid var(--color-border);
-    box-shadow: inset 0 10px 24px rgba(200, 90, 138, .04);
-    backdrop-filter: blur(16px);
+    background: linear-gradient(180deg, rgba(253, 246, 249, 1), rgba(242, 228, 233, 1));
+    border-top: 1px solid rgba(200, 90, 138, .18);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.6), 0 12px 28px rgba(90, 44, 58, .14);
+    backdrop-filter: blur(18px);
     transform: translateX(100%);
     transition: transform var(--transition-slow);
     z-index: 1005;
     padding: 32px 20px 40px;
+    width: 100%;
   }
 
   .header__nav.nav--open {
@@ -1703,23 +1682,41 @@ ul {
     flex-direction: column;
     align-items: center;
     gap: 24px;
+    width: 100%;
   }
 
   .header__nav-link {
-    font-size: 1.1rem;
-  }
-
-  .header__nav-link--campaign {
+    font-size: 1.2rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 120px;
+    min-width: 180px;
+    padding: 12px 18px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, .7), rgba(255, 241, 245, .9));
+    border: 1px solid rgba(200, 90, 138, .14);
+    color: var(--color-text);
+    font-weight: 600;
+    box-shadow: 0 6px 18px rgba(200, 90, 138, .06);
+  }
+
+  .header__nav-link:hover,
+  .header__nav-link:focus-visible {
+    background: linear-gradient(135deg, rgba(200, 90, 138, .12), rgba(245, 212, 119, .14));
+    border-color: rgba(200, 90, 138, .2);
+    color: var(--color-text);
   }
 
   .header__cta {
     font-size: .9rem;
-    width: min(100%, 260px);
+    width: min(100%, 240px);
     justify-content: center;
+  }
+
+  .header__nav-link--campaign {
+    background: linear-gradient(135deg, rgba(200, 90, 138, .14), rgba(245, 212, 119, .18));
+    border-color: rgba(200, 90, 138, .26);
+    color: var(--color-primary-dk);
   }
 
   .hero__actions {
@@ -1758,49 +1755,5 @@ ul {
   .whatsapp-float svg {
     width: 24px;
     height: 24px;
-  }
-
-  .natal-hero {
-    padding-top: 110px;
-  }
-
-  .natal-hero__inner {
-    gap: 28px;
-  }
-
-  .natal-hero__visual {
-    min-height: 320px;
-  }
-
-  .natal-hero__card--primary {
-    width: min(78vw, 300px);
-    height: 380px;
-    left: 50%;
-    transform: translateX(-50%) rotate(-4deg);
-  }
-
-  .natal-hero__card--secondary {
-    width: 150px;
-    height: 145px;
-    right: 10px;
-    bottom: 12px;
-    transform: rotate(8deg);
-  }
-
-  .natal-menu-hero {
-    padding: 18px;
-  }
-
-  .natal-menu-hero__flavors ul {
-    columns: 1;
-    padding-left: 1.1rem;
-  }
-
-  .natal-business__cta {
-    justify-content: center;
-  }
-
-  .natal-cta {
-    padding: 36px 20px;
   }
 }
