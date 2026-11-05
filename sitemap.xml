@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://enroladosgourmet.com.br/</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -30,6 +30,17 @@
     <image:image>
       <image:loc>https://enroladosgourmet.com.br/images/logo.png</image:loc>
       <image:title>Enrolados Gourmet Logo</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://enroladosgourmet.com.br/natal/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://enroladosgourmet.com.br/images/panetone-recehado.png</image:loc>
+      <image:title>Panetone artesanal Enrolados Gourmet</image:title>
+      <image:caption>Panetones de Natal artesanais para presentes e encomendas corporativas</image:caption>
     </image:image>
   </url>
 </urlset>

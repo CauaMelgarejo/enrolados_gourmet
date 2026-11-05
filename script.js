@@ -42,6 +42,7 @@ const dom = {
   grid: document.getElementById('cardapioGrid'),
   loader: document.getElementById('cardapioLoader'),
   empty: document.getElementById('cardapioEmpty'),
+  natalGrid: document.getElementById('natalProductGrid'),
 };
 
 // =========================================================
@@ -258,6 +259,8 @@ function aoSelecionarCategoria(categoria) {
 // =========================================================
 
 function iniciarHeader() {
+  if (!dom.header || !dom.menuToggle || !dom.navMenu) return;
+
   // Scroll → adiciona sombra
   window.addEventListener('scroll', () => {
     dom.header.classList.toggle('header--scrolled', window.scrollY > 40);
@@ -327,6 +330,124 @@ function iniciarScrollReveal() {
   observarElementos(document.querySelectorAll('.reveal-on-scroll'));
 }
 
+function iniciarFaqs() {
+  document.querySelectorAll('.faq-item').forEach((item) => {
+    const button = item.querySelector('.faq-question');
+    const panel = item.querySelector('.faq-answer');
+    if (!button || !panel) return;
+
+    const isOpen = item.classList.contains('is-open');
+    panel.hidden = !isOpen;
+    button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+
+    button.addEventListener('click', () => {
+      const shouldOpen = !item.classList.contains('is-open');
+      item.classList.toggle('is-open', shouldOpen);
+      panel.hidden = !shouldOpen;
+      button.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+    });
+  });
+}
+
+function renderizarPanetonesNatal() {
+  if (!dom.natalGrid) return;
+
+  const existingHero = dom.natalGrid.querySelector('.natal-menu-hero');
+  const modal = dom.natalGrid.querySelector('.natal-lightbox');
+  const trigger = dom.natalGrid.querySelector('.natal-menu-card__zoom');
+
+  if (!existingHero && !modal) {
+    const whatsappUrl = gerarUrlWhatsapp(
+      'Olá! Gostaria de fazer uma encomenda de Natal. Tenho interesse nos chocotones da Enrolados Gourmet e gostaria de consultar a disponibilidade.'
+    );
+    const whatsappCorpUrl = gerarUrlWhatsapp(
+      'Olá! Tenho interesse em realizar um pedido corporativo de panetones para minha empresa. Gostaria de receber mais informações e solicitar um orçamento.'
+    );
+
+    dom.natalGrid.innerHTML = `
+      <article class="natal-menu-hero reveal-on-scroll">
+        <div class="natal-menu-hero__content">
+          <span class="natal-menu-card__tag">Cardápio oficial</span>
+          <h3>Nosso Cardápio de Natal</h3>
+          <p>Chocotone Tradicional e Chocotone Trufado com tamanhos e preços em destaque. Consulte sabores e condições para sua encomenda.</p>
+
+          <div class="natal-menu-hero__detail-grid">
+            <div class="natal-menu-spec">
+              <h4>Chocotone Tradicional</h4>
+              <ul>
+                <li><span>120g</span><strong>R$ 7,50</strong></li>
+                <li><span>250g</span><strong>R$ 22,00</strong></li>
+                <li><span>500g</span><strong>R$ 35,00</strong></li>
+              </ul>
+            </div>
+            <div class="natal-menu-spec">
+              <h4>Chocotone Trufado</h4>
+              <ul>
+                <li><span>120g</span><strong>R$ 10,00</strong></li>
+                <li><span>420g</span><strong>R$ 28,00</strong></li>
+                <li><span>800g</span><strong>R$ 48,00</strong></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="natal-menu-hero__flavors">
+            <h4>Sabores disponíveis</h4>
+            <ul>
+              <li>Brigadeiro</li>
+              <li>Branquinho</li>
+              <li>Stikadinho</li>
+              <li>Morango</li>
+              <li class="natal-menu-hero__flavor--note">Cravejado — somente por encomenda</li>
+              <li>Ferrero Rocher</li>
+              <li>Kinder Bueno</li>
+              <li>Oreo</li>
+              <li class="natal-menu-hero__flavor--highlight">Ninho com Nutella — acréscimo de R$ 12,00</li>
+              <li>Maracujá trufado</li>
+            </ul>
+          </div>
+
+          <p class="natal-menu-hero__deadline"><strong>Faça suas encomendas de Natal até dia 20 de dezembro.</strong></p>
+          <div class="natal-menu-hero__actions">
+            <a href="${whatsappUrl}" class="btn btn--whatsapp btn--sm" target="_blank" rel="noopener noreferrer">Fazer pedido</a>
+            <a href="${whatsappCorpUrl}" class="btn btn--primary btn--sm" target="_blank" rel="noopener noreferrer">Pedido corporativo</a>
+          </div>
+        </div>
+        <div class="natal-menu-hero__image-wrap">
+          <img src="../images/PanetonesFestivos.png" alt="Cardápio oficial de panetones de Natal da Enrolados Gourmet" loading="lazy" />
+          <button type="button" class="natal-menu-card__zoom" aria-label="Ampliar imagem do cardápio">Ampliar imagem</button>
+        </div>
+      </article>
+      <div class="natal-lightbox" id="natalLightbox" aria-hidden="true">
+        <button type="button" class="natal-lightbox__close" aria-label="Fechar imagem">Fechar</button>
+        <img src="../images/PanetonesFestivos.png" alt="Cardápio oficial de panetones de Natal da Enrolados Gourmet" />
+      </div>
+    `;
+  }
+
+  const activeModal = dom.natalGrid.querySelector('.natal-lightbox');
+  const activeTrigger = dom.natalGrid.querySelector('.natal-menu-card__zoom');
+  if (activeModal && activeTrigger) {
+    activeTrigger.addEventListener('click', () => {
+      activeModal.classList.add('is-open');
+      activeModal.setAttribute('aria-hidden', 'false');
+    });
+
+    activeModal.addEventListener('click', (event) => {
+      if (event.target === activeModal || event.target.classList.contains('natal-lightbox__close')) {
+        activeModal.classList.remove('is-open');
+        activeModal.setAttribute('aria-hidden', 'true');
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && activeModal.classList.contains('is-open')) {
+        activeModal.classList.remove('is-open');
+        activeModal.setAttribute('aria-hidden', 'true');
+      }
+    });
+  }
+}
+
 // =========================================================
 // INICIALIZAÇÃO
 // =========================================================
@@ -334,5 +455,9 @@ function iniciarScrollReveal() {
 document.addEventListener('DOMContentLoaded', () => {
   iniciarHeader();
   iniciarScrollReveal();
-  iniciarCardapio();
+  iniciarFaqs();
+  renderizarPanetonesNatal();
+  if (dom.filtros && dom.grid && dom.loader && dom.empty) {
+    iniciarCardapio();
+  }
 });
