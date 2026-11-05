@@ -1666,13 +1666,22 @@ ul {
     --header-h: 60px;
   }
 
+  .btn {
+    white-space: normal;
+  }
+
+  .header__container {
+    padding-inline: 16px;
+  }
+
   .header__menu-toggle {
     display: flex;
   }
 
   .header__nav {
     position: fixed;
-    inset: 0;
+    inset: var(--header-h) 0 0 0;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     gap: 32px;
@@ -1681,6 +1690,7 @@ ul {
     transform: translateX(100%);
     transition: transform var(--transition-slow);
     z-index: 1005;
+    padding: 32px 20px 40px;
   }
 
   .header__nav.nav--open {
@@ -1694,11 +1704,20 @@ ul {
   }
 
   .header__nav-link {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .header__nav-link--campaign {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
   }
 
   .header__cta {
     font-size: .9rem;
+    width: min(100%, 260px);
+    justify-content: center;
   }
 
   .hero__actions {
@@ -1737,5 +1756,49 @@ ul {
   .whatsapp-float svg {
     width: 24px;
     height: 24px;
+  }
+
+  .natal-hero {
+    padding-top: 110px;
+  }
+
+  .natal-hero__inner {
+    gap: 28px;
+  }
+
+  .natal-hero__visual {
+    min-height: 320px;
+  }
+
+  .natal-hero__card--primary {
+    width: min(78vw, 300px);
+    height: 380px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-4deg);
+  }
+
+  .natal-hero__card--secondary {
+    width: 150px;
+    height: 145px;
+    right: 10px;
+    bottom: 12px;
+    transform: rotate(8deg);
+  }
+
+  .natal-menu-hero {
+    padding: 18px;
+  }
+
+  .natal-menu-hero__flavors ul {
+    columns: 1;
+    padding-left: 1.1rem;
+  }
+
+  .natal-business__cta {
+    justify-content: center;
+  }
+
+  .natal-cta {
+    padding: 36px 20px;
   }
 }
