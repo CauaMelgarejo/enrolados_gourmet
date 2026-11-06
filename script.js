@@ -13,7 +13,7 @@
 // =========================================================
 const CONFIG = {
   /** URL do cardápio (troque para sua API futuramente) */
-  cardapioUrl: 'cardapio.json',
+  cardapioUrl: '/cardapio.json',
 
   /** Número do WhatsApp (somente dígitos, com DDI) */
   whatsappNumber: '5551984298431',
